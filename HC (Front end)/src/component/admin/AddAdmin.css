@@ -1,0 +1,18 @@
+.rad{
+    visibility: hidden;
+    display: none;
+}
+.buttons{
+    display: inline;
+    width: 10px;
+}
+
+.pl-2{
+    margin-left: 10px;
+    padding-left: 10px;
+    margin-top:20px;
+    display: inline;
+}
+#result,#up{
+    display: none;
+}

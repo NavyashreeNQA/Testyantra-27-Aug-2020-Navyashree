@@ -1,0 +1,99 @@
+package com.tyss.bookmydoctor.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.tyss.bookmydoctor.dto.ResponseDTO;
+import com.tyss.bookmydoctor.entities.Doctor;
+import com.tyss.bookmydoctor.entities.Patient;
+import com.tyss.bookmydoctor.service.AdminService;
+
+@RestController
+@RequestMapping("/admin")
+@CrossOrigin(origins="*")
+public class AdminController {
+	@Autowired
+	private AdminService adminService;
+	
+	@ResponseBody
+	@PostMapping("/doctor")
+	public ResponseDTO getDoctor(@RequestBody Doctor doctor) {
+		ResponseDTO response = new ResponseDTO();
+		response.setData(adminService.addDoctor(doctor));
+		return response;
+
+	}
+	
+	@DeleteMapping("/doctor/{id}")
+	public ResponseDTO removeDoctor(@PathVariable int id) {
+		ResponseDTO response = new ResponseDTO();
+		response.setData(adminService.removeDoctor(id));
+		return response;
+	}
+	
+	@DeleteMapping("/patient/{id}")
+	public ResponseDTO removePatient(@PathVariable int id) {
+		ResponseDTO response = new ResponseDTO();
+		response.setData(adminService.removePatient(id));
+		return response;
+	}
+	
+	@GetMapping("/appointments")
+	public ResponseDTO viewAllAppointments() {
+		ResponseDTO response = new ResponseDTO();
+		response.setData(adminService.viewAllAppointments());
+		return response;
+	}
+	
+	@DeleteMapping("/user/{email}")
+	public ResponseDTO removeUser(@PathVariable String emailId) {
+		ResponseDTO response = new ResponseDTO();
+		response.setData(adminService.removeUser(email));
+		return response;
+	}
+	
+	@PutMapping("/doctor-profile")
+	public ResponseDTO updateDoctor(@RequestBody Doctor doctor) {
+		ResponseDTO response = new ResponseDTO();
+		response.setData(adminService.updateDoctor(doctor));
+		return response;
+	}
+	
+	@PutMapping("/updatePatient")		
+	public ResponseDTO updatePatient(@RequestBody Patient patient) {
+		ResponseDTO response = new ResponseDTO();
+		response.setData(adminService.updatePatient(patient));
+		return response;
+	}
+	
+	@GetMapping("/doctors")
+	public ResponseDTO getAllDoctor() {
+		ResponseDTO response = new ResponseDTO();
+		response.setData(adminService.getAllDoctor());
+		return response;
+	}
+	
+	@GetMapping("/patients")
+	public ResponseDTO getAllPatient() {
+		ResponseDTO response = new ResponseDTO();
+		response.setData(adminService.getAllPatient());
+		return response;
+	}
+	
+	@DeleteMapping("/appointment/{appointmentId}")
+	public ResponseDTO removeAppointment(@PathVariable int appointmentId) {
+		ResponseDTO response = new ResponseDTO();
+		response.setData(adminService.removeAppointment(appointmentId));
+		return response;
+	}
+
+}

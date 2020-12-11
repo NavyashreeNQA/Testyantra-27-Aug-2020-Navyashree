@@ -1,0 +1,42 @@
+package com.tyss.bookmydoctor.entities;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.OneToOne;
+
+import lombok.Data;
+
+@Data
+@Entity
+public class RatingDetails {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int ratingId;
+	
+	@Column(name = "doctorName")
+	private String doctorName;
+
+	
+	@Column(name = "Feedback")
+	private String feedback;
+
+	@Column(name = "ratings")
+	private int ratings;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "patientId")
+	private Patient patient;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+//	@JoinColumns({
+//	@JoinColumn(name="doctorId", referencedColumnName="doctor_id"),
+    @JoinColumn(name="doctorName", referencedColumnName="doctorname")
+	private Doctor doctor;
+
+}

@@ -1,0 +1,10 @@
+127.0.0.1 - - [11/Dec/2020:07:59:41 +0530] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [11/Dec/2020:11:20:57 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [11/Dec/2020:11:26:58 +0530] "OPTIONS /bookmydoctor/user/login HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [11/Dec/2020:11:27:00 +0530] "POST /bookmydoctor/user/login HTTP/1.1" 500 3671
+0:0:0:0:0:0:0:1 - - [11/Dec/2020:11:28:14 +0530] "POST /bookmydoctor/user/login HTTP/1.1" 200 146
+0:0:0:0:0:0:0:1 - - [11/Dec/2020:11:28:27 +0530] "GET /bookmydoctor/admin/doctors HTTP/1.1" 200 798
+0:0:0:0:0:0:0:1 - - [11/Dec/2020:11:28:45 +0530] "GET /bookmydoctor/admin/patients HTTP/1.1" 200 629
+0:0:0:0:0:0:0:1 - - [11/Dec/2020:11:28:50 +0530] "GET /bookmydoctor/admin/doctors HTTP/1.1" 200 798
+0:0:0:0:0:0:0:1 - - [11/Dec/2020:12:21:25 +0530] "OPTIONS /bookmydoctor/user/login HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [11/Dec/2020:12:21:25 +0530] "POST /bookmydoctor/user/login HTTP/1.1" 200 147

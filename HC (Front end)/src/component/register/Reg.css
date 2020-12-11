@@ -1,0 +1,94 @@
+.form{
+    padding-top: 0cm;
+    margin-top: 0cm;
+    margin-bottom: 5cm;
+    margin-left: 7cm;
+    /* margin: auto; */
+    width: 50%;
+    padding: 15px;
+}
+
+align{
+    margin-left: 11cm;
+    text-align: left;
+    font-size: 15px;
+}
+reg{
+    margin-left: 24px;
+    align-items: center;
+   
+}
+
+.Body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+        /* background-color: lightblue; */
+}
+
+.Header{
+    display: block;
+    text-align: center;
+}
+/* .Form{
+    text-align: center;
+    border-style:groove ;
+    width: 400px;
+   margin: 0 auto;
+   height: 400px;
+   margin-top: 100px;
+   border-radius: 30px 30px 30px 30px;
+} */
+
+.Input{ 
+    width:200px;
+    height:20px;
+    display:inline-block;
+    outline: none;
+    text-align: center;
+    font-size: 15px;
+    
+} 
+.Button{
+    background-color: #4CAF50; /* Green */
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    margin-top: 30px;
+    border: black;
+   border: radius 50px;
+    font-size:15px;
+    /* position: absolute; */
+}
+
+
+h{
+    display:inline-block;
+    /* display: block; */
+}
+
+sbtn{
+    align-self: left;
+}
+
+cabtn{
+    align-self: right;
+}
+
+
+.border{
+    border: 1px solid rgba(147, 184, 189,0.8);
+	box-shadow:	
+		0pt 2px 5px rgba(68, 71, 71, 0.7),	
+		0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 4px;
+}
+
+.txtbox{
+margin: auto;
+height: 200px;
+width: 50%;
+  border: 3px solid green;
+  padding: 5px;
+}

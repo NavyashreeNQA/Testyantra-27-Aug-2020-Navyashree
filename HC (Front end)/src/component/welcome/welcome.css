@@ -1,0 +1,36 @@
+
+  .bg{
+    height: 450px;
+    font-size: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0cm;
+    position: fixed;
+  }
+ 
+ .imag{
+    margin-top:30px;
+    height: 500px;
+    width:100%;
+    z-index: -1;
+  }
+
+  .p{
+    padding-left: 45px;
+    padding-right: 45px;
+    text-align: justify;
+   font-size: 18px;
+   margin-top: 1cm;
+}
+
+.cor{
+  padding-top: 8px;
+}
+
+footer{
+  background-color:#333;
+  color:white;
+  margin-top: 100px;
+}
+

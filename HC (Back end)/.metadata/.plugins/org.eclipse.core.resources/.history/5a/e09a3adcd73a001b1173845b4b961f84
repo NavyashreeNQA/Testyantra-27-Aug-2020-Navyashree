@@ -1,0 +1,31 @@
+package com.tyss.bookmydoctor.service;
+import java.util.Date;
+import java.util.List;
+
+import com.tyss.bookmydoctor.entities.Appointment;
+import com.tyss.bookmydoctor.entities.Doctor;
+import com.tyss.bookmydoctor.entities.DoctorAvailability;
+import com.tyss.bookmydoctor.entities.DoctorTimeslot;
+import com.tyss.bookmydoctor.entities.RatingDetails;
+import com.tyss.bookmydoctor.entities.User;
+
+
+public interface DoctorService {
+		public Doctor addDoctor(Doctor doctor);
+		
+		public Doctor updateDoctor(Doctor doctor);
+		
+		public Doctor removeDoctor(int doctorId);
+		
+		public List<RatingDetails> getAllRatings();
+	    
+	    public List<Appointment> getAllScheduledAppointment();
+	    
+	    public DoctorAvailability updateAvailability(DoctorAvailability availability); 
+	    
+	   	public List<DoctorTimeslot> updateTimeslot(Date timeslotFrom,Date timeslotTo); 
+	   	
+	   	public Doctor getDoctor(User user);
+}
+
+

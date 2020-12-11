@@ -1,0 +1,39 @@
+.head{
+    background-color: blue;
+    align-content: center;
+    font-size: 100px;
+    /* margin-left: 5px;
+    margin-right: 5px; */
+}
+
+.body{
+    align-items: center;
+}
+
+.p{
+    padding-left: 45px;
+    padding-right: 45px;
+    text-align: justify;
+}
+.img{
+   
+    height: auto;
+    max-height: 2150px;
+    width: auto;
+    max-width: 2150px;
+    text-align: justify;
+}
+
+.txt{
+    font-style: bold;
+}
+
+.hs{
+    margin-left: 7px;
+    align-items: center;
+}
+
+.abt{
+    align-content: center;
+    margin-left: 650px;
+}

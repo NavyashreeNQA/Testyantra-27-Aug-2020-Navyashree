@@ -1,0 +1,51 @@
+package com.tyss.bookmydoctor.dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.PersistenceUnit;
+import javax.persistence.TypedQuery;
+
+import org.springframework.stereotype.Repository;
+
+import com.tyss.bookmydoctor.dto.UserDTO;
+import com.tyss.bookmydoctor.entities.User;
+
+@Repository
+public class UserDAOImpl implements UserDAO {
+
+	@PersistenceUnit
+	EntityManagerFactory factory;
+
+	@Override
+	public User registerUser(User user) {
+		EntityManager manager = factory.createEntityManager();
+		manager.getTransaction().begin();
+		manager.persist(user);
+		manager.getTransaction().commit();
+		manager.close();
+		return user;
+		
+	}
+
+
+	
+	@Override
+	public User authenticateUser(UserDTO user) {
+		EntityManager manager = factory.createEntityManager();
+		manager.getTransaction().begin();
+		TypedQuery<User> query = manager.createQuery("FROM User U WHERE U.email= : mail AND U.password=:pwd",
+				User.class);
+		query.setParameter("mail", user.getEmail());
+		query.setParameter("pwd", user.getPassword());
+		User user1 = (User) query.getSingleResult();
+		if (user!= null) {
+			manager.close();
+			
+		}
+		 
+		return user1;
+
+	}
+
+
+}
